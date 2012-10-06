@@ -23,7 +23,7 @@ public class mod_amod {
 	
 	//Proxy
 	
-	@SidedProxy(clientSide="amod.Client.ClientProxy", serverSide= "amod.Common.CommonProxy")
+	@SidedProxy(clientSide="amod.Client.ClientProxy", serverSide= "amod.common.CommonProxy")
 	public static CommonProxy proxy;
 	
 	//ToolMaterial
@@ -40,6 +40,7 @@ public class mod_amod {
 		//Register Name
 		GameRegistry.registerBlock(LightStoneOre);
 		GameRegistry.registerBlock(DarkStoneOre);
+		GameRegistry.registerWorldGenerator(new AModWorldGen());
 		
 		//Register Block/Items
 		LanguageRegistry.addName(LightStoneOre, "LightStone Ore");
