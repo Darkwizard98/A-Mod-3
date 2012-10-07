@@ -1,0 +1,21 @@
+[
+{
+  "modid": "A-Mod-3",
+  "name": "A-Mod",
+  "description": "A tutorial",
+  "version": "Pre-Alpha b1",
+  "mcversion": "1.3.2",
+  "url": "http://mnpserver.org",
+  "updateUrl": "",
+  "authors": [
+    "Darkwizard98"
+  ],
+  "credits": "Darkwizard98",
+  "logoFile": "",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [ 
+  ]
+}
+]

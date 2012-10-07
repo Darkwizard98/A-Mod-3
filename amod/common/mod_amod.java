@@ -26,8 +26,9 @@ public class mod_amod {
 	public static Item DarkStoneAxe;
 	public static Item DarkStoneSpade;
 	public static Item DarkStonePick;
+	public static Item LightStoneBall;
 	
-	int LightStoneID, DarkStoneID, DarkStoneSwordID, DarkStoneAxeID, DarkStoneSpadeID, DarkStonePickID;
+	int LightStoneID, DarkStoneID, DarkStoneSwordID, DarkStoneAxeID, DarkStoneSpadeID, DarkStonePickID, LightStoneBallID;
 	
 	//Proxy
 	
@@ -50,6 +51,7 @@ public class mod_amod {
 		DarkStoneAxeID= config.getOrCreateIntProperty("DarkStone Axe ID", Configuration.CATEGORY_ITEM, 501).getInt();
 		DarkStoneSpadeID= config.getOrCreateIntProperty("DarkStone Spade ID", Configuration.CATEGORY_ITEM, 502).getInt();
 		DarkStonePickID= config.getOrCreateIntProperty("DarkStone Pick ID", Configuration.CATEGORY_ITEM, 503).getInt();
+		LightStoneBallID= config.getOrCreateIntProperty("LightStone Ball ID", Configuration.CATEGORY_ITEM, 504).getInt();
 		
 		config.save();
 		
@@ -65,6 +67,7 @@ public class mod_amod {
 		DarkStoneAxe=new DarkStoneAxe(DarkStoneAxeID, EnumAmodMat).setItemName("DarkStoneAxe").setIconIndex(1);
 		DarkStoneSpade=new DarkStoneSpade(DarkStoneSpadeID, EnumAmodMat).setItemName("DarkStoneSpade").setIconIndex(2);
 		DarkStonePick=new DarkStonePick(DarkStonePickID, EnumAmodMat).setItemName("DarkStonePick").setIconIndex(3);
+		LightStoneBall=new LightStoneBall(LightStoneBallID).setIconIndex(4).setItemName("LightStoneBall");
 		
 		//Register Name
 		GameRegistry.registerBlock(LightStoneOre);
@@ -78,6 +81,7 @@ public class mod_amod {
 		LanguageRegistry.addName(DarkStoneAxe, "DarkStone Axe");
 		LanguageRegistry.addName(DarkStoneSpade, "DarkStone Spade");
 		LanguageRegistry.addName(DarkStonePick, "DarkStone Pick");
+		LanguageRegistry.addName(LightStoneBall, "LightStone Ball");
 		
 		//Crafting Recipes
 		
