@@ -11,7 +11,7 @@ public class DarkStoneOre extends Block {
 	}
 	
 	public String getTextureFile(){
-		return "/Blocks.png";
+		return "/AmodTextures/Blocks.png";
 	}
 
 }

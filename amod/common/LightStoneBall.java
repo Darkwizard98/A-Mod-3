@@ -10,7 +10,7 @@ public class LightStoneBall extends Item{
 		this.setCreativeTab(CreativeTabs.tabMaterials);
 	}
 	public String getTextureFile(){
-		return "/Items.png";
+		return "/AmodTextures/Items.png";
 	}
 
 }

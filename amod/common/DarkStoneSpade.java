@@ -12,7 +12,7 @@ public class DarkStoneSpade extends ItemSpade{
 		super(ItemID, material);
 	}
 	public String getTextureFile(){
-		return "/Items.png";
+		return "/AmodTextures/Items.png";
 	}
 	@SideOnly(Side.CLIENT)
 	public EnumRarity getRarity(ItemStack par1){

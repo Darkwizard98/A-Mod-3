@@ -16,7 +16,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 
-@Mod(modid="Jake-Amod", name="Amod", version="1.0.0")
+@Mod(modid="Jake-Amod", name="Amod", version="Pre-Alpha b1")
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 public class mod_amod {
 	//Int Stuff
@@ -61,13 +61,13 @@ public class mod_amod {
 	@Init
 	public void load(FMLInitializationEvent even){
 		//Declare Stuff
-		LightStoneOre=(new LightStoneOre(LightStoneID, 0)).setBlockName("LightStoneOre").setHardness(1F).setResistance(5F);
+		LightStoneOre=(new LightStoneOre(LightStoneID, 0)).setBlockName("LightStoneOre").setLightValue(1.0F).setHardness(1F).setResistance(5F);
 		DarkStoneOre=(new DarkStoneOre(DarkStoneID, 1)).setBlockName("DarkStoneOre").setHardness(1F).setResistance(5F);
 		DarkStoneSword=new DarkStoneSword(DarkStoneSwordID, EnumAmodMat).setItemName("DarkStoneSword").setIconIndex(0);
-		DarkStoneAxe=new DarkStoneAxe(DarkStoneAxeID, EnumAmodMat).setItemName("DarkStoneAxe").setIconIndex(1);
-		DarkStoneSpade=new DarkStoneSpade(DarkStoneSpadeID, EnumAmodMat).setItemName("DarkStoneSpade").setIconIndex(2);
-		DarkStonePick=new DarkStonePick(DarkStonePickID, EnumAmodMat).setItemName("DarkStonePick").setIconIndex(3);
-		LightStoneBall=new LightStoneBall(LightStoneBallID).setIconIndex(4).setItemName("LightStoneBall");
+		DarkStoneAxe=new DarkStoneAxe(DarkStoneAxeID, EnumAmodMat).setItemName("DarkStoneAxe").setIconIndex(0);
+		DarkStoneSpade=new DarkStoneSpade(DarkStoneSpadeID, EnumAmodMat).setItemName("DarkStoneSpade").setIconIndex(0);
+		DarkStonePick=new DarkStonePick(DarkStonePickID, EnumAmodMat).setItemName("DarkStonePick").setIconIndex(0);
+		LightStoneBall=new LightStoneBall(LightStoneBallID).setIconIndex(0).setItemName("LightStoneBall");
 		
 		//Register Name
 		GameRegistry.registerBlock(LightStoneOre);

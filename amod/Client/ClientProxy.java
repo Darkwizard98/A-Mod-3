@@ -6,8 +6,8 @@ import amod.common.CommonProxy;
 public class ClientProxy extends CommonProxy {
 	@Override
 	public void registerRenderThings(){
-		MinecraftForgeClient.preloadTexture("/Blocks.png");
-		MinecraftForgeClient.preloadTexture("/Items.png");
+		MinecraftForgeClient.preloadTexture("/AmodTextures/Blocks.png");
+		MinecraftForgeClient.preloadTexture("/AmodTextures/Items.png");
 	}
 
 }

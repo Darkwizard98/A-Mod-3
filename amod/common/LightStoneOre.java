@@ -13,7 +13,7 @@ public class LightStoneOre extends Block {
 	}
 	
 	public String getTextureFile(){
-		return "/Blocks.png";
+		return "/AmodTextures/Blocks.png";
 	}
 	public int idDropped(int par1, Random par2Random, int par3){
 		return mod_amod.LightStoneBall.shiftedIndex;

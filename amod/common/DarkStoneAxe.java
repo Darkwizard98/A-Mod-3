@@ -12,7 +12,7 @@ public class DarkStoneAxe extends ItemAxe{
 		super(ItemID, material);
 	}
 	public String getTextureFile(){
-		return "/Items.png";
+		return "/AmodTextures/Items.png";
 	}
 	
 	@SideOnly(Side.CLIENT)
