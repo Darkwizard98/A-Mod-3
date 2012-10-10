@@ -17,7 +17,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 
-@Mod(modid="Jake-Amod", name="Amod", version="Pre-Alpha b1")
+@Mod(modid="Jake-Amod", name="Amod", version="Alpha 0.0.1")
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 public class mod_amod {
 	//Int Stuff
@@ -99,7 +99,22 @@ public class mod_amod {
 		LanguageRegistry.addName(DarkBlueMatter, "Dark Blue Matter");
 		
 		//Crafting Recipes
-		
+		GameRegistry.addRecipe(new ItemStack(DarkStoneSword), new Object[]
+			    {
+			     " X ", " X ", " S ", 'X', DarkStoneBall, 'S', Item.stick
+			    });
+		GameRegistry.addRecipe(new ItemStack(DarkStonePick), new Object[]
+			    {
+			     "XXX", " S ", " S ", 'X', DarkStoneBall, 'S', Item.stick
+			    });
+		GameRegistry.addRecipe(new ItemStack(DarkStoneSpade), new Object[]
+			    {
+			     " X ", " S ", " S ", 'X', DarkStoneBall, 'S', Item.stick
+			    });
+		GameRegistry.addRecipe(new ItemStack(DarkStoneAxe), new Object[]
+			    {
+			     "XX ", "XS ", " S ", 'X', DarkStoneBall, 'S', Item.stick
+			    });
 		//Smeltiing Recipe
 		
 		//Texture Register
