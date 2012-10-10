@@ -45,13 +45,13 @@ public class mod_amod {
 		
 		config.load();
 		
-		LightStoneID= config.getOrCreateIntProperty("LightStone Ore ID", Configuration.CATEGORY_BLOCK, 255).getInt();
-		DarkStoneID= config.getOrCreateIntProperty("DarkStone Ore ID", Configuration.CATEGORY_BLOCK, 254).getInt();
-		DarkStoneSwordID= config.getOrCreateIntProperty("DarkStone Sword ID", Configuration.CATEGORY_ITEM, 500).getInt();
-		DarkStoneAxeID= config.getOrCreateIntProperty("DarkStone Axe ID", Configuration.CATEGORY_ITEM, 501).getInt();
-		DarkStoneSpadeID= config.getOrCreateIntProperty("DarkStone Spade ID", Configuration.CATEGORY_ITEM, 502).getInt();
-		DarkStonePickID= config.getOrCreateIntProperty("DarkStone Pick ID", Configuration.CATEGORY_ITEM, 503).getInt();
-		LightStoneBallID= config.getOrCreateIntProperty("LightStone Ball ID", Configuration.CATEGORY_ITEM, 504).getInt();
+		LightStoneID= config.getOrCreateIntProperty("LightStone Ore ID", Configuration.CATEGORY_BLOCK, 1551).getInt();
+		DarkStoneID= config.getOrCreateIntProperty("DarkStone Ore ID", Configuration.CATEGORY_BLOCK, 1552).getInt();
+		DarkStoneSwordID= config.getOrCreateIntProperty("DarkStone Sword ID", Configuration.CATEGORY_ITEM, 4745).getInt();
+		DarkStoneAxeID= config.getOrCreateIntProperty("DarkStone Axe ID", Configuration.CATEGORY_ITEM, 4746).getInt();
+		DarkStoneSpadeID= config.getOrCreateIntProperty("DarkStone Spade ID", Configuration.CATEGORY_ITEM, 4747).getInt();
+		DarkStonePickID= config.getOrCreateIntProperty("DarkStone Pick ID", Configuration.CATEGORY_ITEM, 4748).getInt();
+		LightStoneBallID= config.getOrCreateIntProperty("LightStone Ball ID", Configuration.CATEGORY_ITEM, 4749).getInt();
 		
 		config.save();
 		
@@ -63,10 +63,10 @@ public class mod_amod {
 		//Declare Stuff
 		LightStoneOre=(new LightStoneOre(LightStoneID, 0)).setBlockName("LightStoneOre").setLightValue(1.0F).setHardness(1F).setResistance(5F);
 		DarkStoneOre=(new DarkStoneOre(DarkStoneID, 1)).setBlockName("DarkStoneOre").setHardness(1F).setResistance(5F);
-		DarkStoneSword=new DarkStoneSword(DarkStoneSwordID, EnumAmodMat).setItemName("DarkStoneSword").setIconIndex(0);
-		DarkStoneAxe=new DarkStoneAxe(DarkStoneAxeID, EnumAmodMat).setItemName("DarkStoneAxe").setIconIndex(0);
-		DarkStoneSpade=new DarkStoneSpade(DarkStoneSpadeID, EnumAmodMat).setItemName("DarkStoneSpade").setIconIndex(0);
-		DarkStonePick=new DarkStonePick(DarkStonePickID, EnumAmodMat).setItemName("DarkStonePick").setIconIndex(0);
+		DarkStoneSword=new DarkStoneSword(DarkStoneSwordID, EnumAmodMat).setItemName("DarkStoneSword").setIconIndex(6);
+		DarkStoneAxe=new DarkStoneAxe(DarkStoneAxeID, EnumAmodMat).setItemName("DarkStoneAxe").setIconIndex(1);
+		DarkStoneSpade=new DarkStoneSpade(DarkStoneSpadeID, EnumAmodMat).setItemName("DarkStoneSpade").setIconIndex(3);
+		DarkStonePick=new DarkStonePick(DarkStonePickID, EnumAmodMat).setItemName("DarkStonePick").setIconIndex(2);
 		LightStoneBall=new LightStoneBall(LightStoneBallID).setIconIndex(0).setItemName("LightStoneBall");
 		
 		//Register Name
