@@ -26,6 +26,7 @@ public class AModWorldGen implements IWorldGenerator {
 		  
 		  (new WorldGenMinable(mod_amod.LightStoneOre.blockID, 10)).generate(world, random, Xcoord, Ycoord, Zcoord);
 		  (new WorldGenMinable(mod_amod.DarkStoneOre.blockID, 10)).generate(world, random, Xcoord, Ycoord, Zcoord);
+		  (new WorldGenMinable(mod_amod.DarkBlueMatter.blockID, 10)).generate(world, random, Xcoord, Ycoord, Zcoord);
 		
 	}
 

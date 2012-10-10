@@ -3,6 +3,7 @@ package amod.common;
 import net.minecraft.src.Block;
 import net.minecraft.src.EnumToolMaterial;
 import net.minecraft.src.Item;
+import net.minecraft.src.ItemStack;
 import net.minecraftforge.common.Configuration;
 import net.minecraftforge.common.EnumHelper;
 import cpw.mods.fml.common.Mod;
@@ -22,13 +23,18 @@ public class mod_amod {
 	//Int Stuff
 	public static Block LightStoneOre;
 	public static Block DarkStoneOre;
+	public static Block DarkBlueMatter;
 	public static Item DarkStoneSword;
 	public static Item DarkStoneAxe;
 	public static Item DarkStoneSpade;
 	public static Item DarkStonePick;
 	public static Item LightStoneBall;
+	public static Item DarkStoneBall;
+	public static Item DarkBlueMatterDust;
 	
-	int LightStoneID, DarkStoneID, DarkStoneSwordID, DarkStoneAxeID, DarkStoneSpadeID, DarkStonePickID, LightStoneBallID;
+	
+	int LightStoneID, DarkStoneID, DarkStoneSwordID, DarkStoneAxeID, DarkStoneSpadeID, DarkStonePickID, LightStoneBallID,
+	DarkBlueMatterID, DarkBlueMatterDustID, DarkStoneBallID;
 	
 	//Proxy
 	
@@ -47,31 +53,37 @@ public class mod_amod {
 		
 		LightStoneID= config.getOrCreateIntProperty("LightStone Ore ID", Configuration.CATEGORY_BLOCK, 1551).getInt();
 		DarkStoneID= config.getOrCreateIntProperty("DarkStone Ore ID", Configuration.CATEGORY_BLOCK, 1552).getInt();
+		DarkBlueMatterID= config.getOrCreateIntProperty("Dark Blue Matter ID", Configuration.CATEGORY_BLOCK, 1553).getInt();
 		DarkStoneSwordID= config.getOrCreateIntProperty("DarkStone Sword ID", Configuration.CATEGORY_ITEM, 4745).getInt();
 		DarkStoneAxeID= config.getOrCreateIntProperty("DarkStone Axe ID", Configuration.CATEGORY_ITEM, 4746).getInt();
 		DarkStoneSpadeID= config.getOrCreateIntProperty("DarkStone Spade ID", Configuration.CATEGORY_ITEM, 4747).getInt();
 		DarkStonePickID= config.getOrCreateIntProperty("DarkStone Pick ID", Configuration.CATEGORY_ITEM, 4748).getInt();
 		LightStoneBallID= config.getOrCreateIntProperty("LightStone Ball ID", Configuration.CATEGORY_ITEM, 4749).getInt();
-		
+		DarkBlueMatterDustID= config.getOrCreateIntProperty("Dark Blue Matter ID", Configuration.CATEGORY_ITEM, 4750).getInt();
+		DarkStoneBallID= config.getOrCreateIntProperty("DarkStone Ball ID", Configuration.CATEGORY_ITEM, 4751).getInt();
 		config.save();
 		
 	}
 	
 	
 	@Init
-	public void load(FMLInitializationEvent even){
+	public void load(FMLInitializationEvent event){
 		//Declare Stuff
 		LightStoneOre=(new LightStoneOre(LightStoneID, 0)).setBlockName("LightStoneOre").setLightValue(1.0F).setHardness(1F).setResistance(5F);
 		DarkStoneOre=(new DarkStoneOre(DarkStoneID, 1)).setBlockName("DarkStoneOre").setHardness(1F).setResistance(5F);
+		DarkBlueMatter=(new DarkBlueMatter(DarkBlueMatterID, 2)).setBlockName("DarkBlueMatter").setHardness(1F).setResistance(5F);
 		DarkStoneSword=new DarkStoneSword(DarkStoneSwordID, EnumAmodMat).setItemName("DarkStoneSword").setIconIndex(6);
 		DarkStoneAxe=new DarkStoneAxe(DarkStoneAxeID, EnumAmodMat).setItemName("DarkStoneAxe").setIconIndex(1);
 		DarkStoneSpade=new DarkStoneSpade(DarkStoneSpadeID, EnumAmodMat).setItemName("DarkStoneSpade").setIconIndex(3);
 		DarkStonePick=new DarkStonePick(DarkStonePickID, EnumAmodMat).setItemName("DarkStonePick").setIconIndex(2);
-		LightStoneBall=new LightStoneBall(LightStoneBallID).setIconIndex(0).setItemName("LightStoneBall");
+		LightStoneBall=new LightStoneBall(LightStoneBallID).setItemName("LightStoneBall").setIconIndex(0);
+		DarkStoneBall=new DarkStoneBall(DarkStoneBallID).setItemName("DarkStoneBall").setIconIndex(16);
+		DarkBlueMatterDust=new DarkBlueMatterDust(DarkBlueMatterDustID).setItemName("DarkBlueMatterDust").setIconIndex(32);
 		
 		//Register Name
 		GameRegistry.registerBlock(LightStoneOre);
 		GameRegistry.registerBlock(DarkStoneOre);
+		GameRegistry.registerBlock(DarkBlueMatter);
 		GameRegistry.registerWorldGenerator(new AModWorldGen());
 		
 		//Register Block/Items
@@ -82,6 +94,9 @@ public class mod_amod {
 		LanguageRegistry.addName(DarkStoneSpade, "DarkStone Spade");
 		LanguageRegistry.addName(DarkStonePick, "DarkStone Pick");
 		LanguageRegistry.addName(LightStoneBall, "LightStone Ball");
+		LanguageRegistry.addName(DarkStoneBall, "DarkStone Ball");
+		LanguageRegistry.addName(DarkBlueMatterDust, "Dark Blue Matter Dust");
+		LanguageRegistry.addName(DarkBlueMatter, "Dark Blue Matter");
 		
 		//Crafting Recipes
 		
