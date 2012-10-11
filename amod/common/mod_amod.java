@@ -115,6 +115,10 @@ public class mod_amod {
 			    {
 			     "XX ", "XS ", " S ", 'X', DarkStoneBall, 'S', Item.stick
 			    });
+		GameRegistry.addShapelessRecipe(new ItemStack(Block.torchWood, 8), new Object[]
+			    {
+			     LightStoneBall, Item.stick
+			    });
 		//Smeltiing Recipe
 		
 		//Texture Register
